@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <title>MACNOFIC</title>
 <!--[if lt IE 9]>
-  <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-  <![endif]-->
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 <script>document.createElement("oe")</script>
 <style>
 oe {
@@ -22,6 +22,25 @@ oe {
 EMPTY
 <hr/>
 <oe>hello world</oe>
+<br/>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+<script>
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+var ctx1=c.getContext("2d");
+var ctx2=c.getContext("2d");
+ctx.fillStyle="#4F94CD";
+ctx.fillRect(25,12.5,150,75);
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+ctx1.beginPath();
+ctx1.arc(100,50,30,0,2*Math.PI);
+ctx1.stroke();
+ctx2.font="30px Arial";
+ctx2.strokeText("hello world",50,50);
+</script>
 </body>
  
 </html>
